@@ -1,0 +1,31 @@
+track_unknown_space: true
+global_frame: map
+
+plugins: 
+- {name: external,            type: "costmap_2d::StaticLayer"}
+- {name: explore_boundary,    type: "frontier_exploration::BoundedExploreLayer"}
+#Can disable sensor layer if gmapping is fast enough to update scans
+- {name: obstacle,     type: "costmap_2d::ObstacleLayer"}
+- {name: inflation,           type: "costmap_2d::InflationLayer"}
+
+obstacle_range: 5.0
+raytrace_range: 6.0
+footprint: [[-0.1, -0.1], [-0.1, 0.1], [0.1,0.1], [0.1, -0.1]]
+footprint_padding: 0.01
+transform_tolerance: 0.5
+update_frequency: 5.0
+publish_frequency: 5.0
+
+explore_boundary:
+  resize_to_boundary: false
+  frontier_travel_point: middle
+  #set to false for gmapping, true if re-exploring a known area
+  explore_clear_space: false
+  min_frontier_size: 1   #minimum number of frontiers to keep frm algo stopping
+
+obstacle:
+   observation_sources: stereo
+
+   stereo: {sensor_frame: camera_link, data_type: PointCloud2, topic: /camera/depth/color/points, marking: true, clearing: true, obstacle_range: 16, raytrace_range: 16}
+
+   track_unknown_space: true

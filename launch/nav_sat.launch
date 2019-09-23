@@ -1,0 +1,22 @@
+<launch>
+
+  <node pkg="tf" type="static_transform_publisher" name="TF_GPS" args="0.0 0.0 0.15 0.0 0.0 0.0 base_link gps_link 100" />
+
+  <!--node pkg="tf" type="static_transform_publisher" name="TF_UTM" args="0.0 0.0 0.0 0.0 0.0 0.0 utm wgs84 100" /-->
+
+  <node pkg="robot_localization" type="navsat_transform_node" name="NAVSAT" respawn="true">
+
+    <param name="magnetic_declination_radians" value="0"/>
+    <param name="broadcast_utm_transform" type="bool" value="true"/>
+
+    <param name="magnetic_declination_radians" value="0.0"/>
+
+    <param name="yaw_offset" value="0.0"/>
+    <remap from="/gps/fix" to="/gps_navsat" />
+    <remap from="/imu/data" to="/imu" />
+    <remap from="/odometry/filtered" to="odom_inertial" />
+    <remap from="/odometry/gps" to="odom_gps" />
+
+  </node>
+
+</launch>

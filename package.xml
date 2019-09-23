@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>rover_launcher_sitl</name>
+  <version>0.0.1</version>
+  <description>Rover sitl launcher</description>
+
+  <license>Proprietary</license>
+
+  <author email="gdiniz@bbn.com">Giovani Del Nero Diniz</author>
+  <maintainer email="gdiniz@bbn.com">Giovani Del Nero Diniz</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+      <metapackage/>
+  </export>
+</package>

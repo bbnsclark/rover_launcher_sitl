@@ -1,0 +1,18 @@
+<launch>
+
+  <!--node pkg="tf" type="static_transform_publisher" name="TF_MAP_GLOBAL" args="0.0 0.0 0.0 0.0 0.0 0.0 odom map_global 100" /-->
+
+  <node pkg="move_base" type="move_base" respawn="false" name="MOVE_GLOBAL" output="screen">
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+    <rosparam file="/home/nvidia/rover/src/rover_launcher/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="/home/nvidia/rover/src/rover_launcher/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="/home/nvidia/rover/src/rover_launcher/params/local_costmap_params.yaml" command="load" />
+    <rosparam file="/home/nvidia/rover/src/rover_launcher/params/global_costmap_params_global.yaml" command="load" />
+    <rosparam file="/home/nvidia/rover/src/rover_launcher/params/move_base_params.yaml" command="load" />
+    <rosparam file="/home/nvidia/rover/src/rover_launcher/params/dwa_local_planner_params.yaml" command="load" />
+    <remap from="/odom" to ="/odom_local" />
+  </node> 
+
+  <node pkg="clear_costmap" type="clear_costmap.py" respawn="false" name="clear_costmap" output="screen" />
+
+</launch> 

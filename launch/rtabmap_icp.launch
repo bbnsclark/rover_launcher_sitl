@@ -1,0 +1,10 @@
+
+<launch>
+
+    <node pkg="rtabmap_ros" type="icp_odometry" name="ICP" output="screen"> 
+      <param name="publish_tf"  type="bool"   value="false"/>
+      <param name="frame_id"    type="string" value="lidar_link"/>
+      <remap from="odom" to="odom_lidar"/> 
+    </node>
+
+</launch>

@@ -1,0 +1,12 @@
+<launch>
+
+  <arg name="imu" default="RAZOR" doc="Type of IMU being used. options: [RAZOR, MAVROS, VECTORNAV]"/>
+
+  <node pkg="robot_localization" type="ekf_localization_node" name="EKF_INERTIAL" clear_params="true">
+    <rosparam command="load" file="/home/nvidia/rover/src/rover_launcher/params/ekf_inertial.yaml" />
+    <remap from="/odometry/filtered" to="/odom_inertial" />
+  </node>
+	
+
+
+</launch> 

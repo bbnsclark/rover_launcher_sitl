@@ -1,0 +1,12 @@
+<launch>
+
+  <arg name="imu" default="RAZOR" doc="Type of IMU being used. options: [RAZOR, MAVROS, VECTORNAV]"/>
+
+  <node pkg="robot_localization" type="ekf_localization_node" name="EKF_GLOBAL" clear_params="true">
+    <rosparam command="load" file="$HOME/rover/src/rover_launcher/params/ekf_global.yaml" />
+    <remap from="/odometry/filtered" to="/odom_global" />
+  </node>
+	
+
+
+</launch> 

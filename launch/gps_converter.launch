@@ -1,0 +1,9 @@
+<launch>
+
+    <node name="fix_translator" pkg="gps_common" type="fix_translator">
+    <!-- Translate from GPSFix to NavSatFix //-->
+       <remap from="/gps_fix_in"     to="/gps_fix"/>
+       <remap from="/navsat_fix_out" to="/gps_navsat"/>
+  </node>
+
+</launch>
