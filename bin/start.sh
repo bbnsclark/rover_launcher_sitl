@@ -20,9 +20,9 @@ screen -d -m -S ekf_inertial $HOME/rover/src/rover_launcher_sitl/bin/start_ekf_i
 
 sleep 5
 
-screen -d -m -S bridge $HOME/rover/src/rover_launcher_sitl/bin/start_bridge.sh
+#screen -d -m -S bridge $HOME/rover/src/rover_launcher_sitl/bin/start_bridge.sh
 
-sleep 5
+#sleep 5
 
 ###################
 ## indoor nav stack
