@@ -4,6 +4,4 @@
 [ -f "$HOME/rover/devel/setup.sh" ] && source "$HOME/rover/devel/setup.sh"
 [ -f "/etc/default/ros" ] && source "/etc/default/ros"
 
-set -a
-
-roslaunch rosbridge_server rosbridge_websocket.launch
+roslaunch rover_gazebo rover_gazebo.launch
