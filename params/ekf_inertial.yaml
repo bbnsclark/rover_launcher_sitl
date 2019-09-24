@@ -10,7 +10,7 @@ print_diagnostics: false
 debug: false
 debug_out_file: /home/nvidia/ws/src/robot_localization/logs/ekf_local_debug.log
 
-publish_tf: false
+publish_tf: true
 publish_acceleration: false
 
 map_frame: map_inertial     # Defaults to "map" if unspecified

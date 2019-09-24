@@ -11,6 +11,6 @@
     <remap from="/odom" to ="/odom_inertial" />
   </node>
 
-  <node pkg="clear_costmap" type="clear_costmap.py" respawn="false" name="clear_costmap" output="screen" />
+  <!--node pkg="clear_costmap" type="clear_costmap.py" respawn="false" name="clear_costmap" output="screen" /-->
 
 </launch> 

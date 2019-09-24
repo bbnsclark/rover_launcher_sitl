@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 1
+
 screen -d -m -S roscore $HOME/rover/src/rover_launcher_sitl/bin/start_roscore.sh
 
 sleep 5
@@ -26,13 +28,16 @@ sleep 5
 
 ###################
 ## indoor nav stack
-screen -d -m -S nav_inertial $HOME/rover/src/rover_launcher_sitl/bin/start_nav_inertial.sh
-
-sleep 5
 
 screen -d -m -S map_inertial $HOME/rover/src/rover_launcher_sitl/bin/start_map_inertial.sh
 
 sleep 5
+
+screen -d -m -S nav_inertial $HOME/rover/src/rover_launcher_sitl/bin/start_nav_inertial.sh
+
+sleep 5
+
+
 
 ###################
 ## outdoor stack
