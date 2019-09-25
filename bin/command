@@ -1,2 +1,0 @@
-rosservice call cmd_state 'cmd: "set" target_state: "indoor"'
-
