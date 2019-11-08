@@ -43,7 +43,7 @@ sleep 5
 ###################
 ## outdoor stack
 
-#screen -d -m -S gps $HOME/rover/src/rover_launcher_sitl/bin/start_gps_driver.sh
+#screen -d -m -S gps $HOME/rover/src/rover_launcher_sitl/bin/start_gps_driver_sitl.sh
 
 #sleep 15
 
