@@ -14,10 +14,6 @@ screen -d -m -S firmware $HOME/rover/src/rover_launcher_sitl/bin/start_sitl_firm
 
 sleep 5
 
-screen -d -m -S nav_sat $HOME/rover/src/rover_launcher_sitl/bin/start_nav_sat.sh
-
-sleep 5
-
 screen -d -m -S icp $HOME/rover/src/rover_launcher_sitl/bin/start_lidar_icp.sh
 
 sleep 5
