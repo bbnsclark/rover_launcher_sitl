@@ -4,4 +4,4 @@
 [ -f "$HOME/rover/devel/setup.sh" ] && source "$HOME/rover/devel/setup.sh"
 [ -f "/etc/default/ros" ] && source "/etc/default/ros"
 
-rosrun state_observer node.py
+rosrun state_observer_sitl node.py
