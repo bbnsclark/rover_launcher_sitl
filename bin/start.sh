@@ -10,6 +10,10 @@ screen -d -m -S sitl $HOME/rover/src/rover_launcher_sitl/bin/start_gazebo_sitl.s
 
 sleep 5
 
+screen -d -m -S bridge $HOME/rover/src/rover_launcher_sitl/bin/start_bridge.sh
+
+sleep 5
+
 screen -d -m -S firmware $HOME/rover/src/rover_launcher_sitl/bin/start_sitl_firmware.sh
 
 sleep 5
