@@ -10,11 +10,11 @@ screen -d -m -S sitl $HOME/rover/src/rover_launcher_sitl/bin/start_gazebo_sitl.s
 
 sleep 5
 
-screen -d -m -S rosbridge /home/nvidia/rover/src/rover_launcher/bin/start_rosbridge.sh
+screen -d -m -S rosbridge $HOME/rover/src/rover_launcher/bin/start_rosbridge.sh
 
 sleep 5
 
-screen -d -m -S bbnbridge /home/nvidia/rover/src/rover_launcher/bin/start_bbnbridge.sh
+screen -d -m -S bbnbridge $HOME/rover/src/rover_launcher/bin/start_bbnbridge.sh
 
 sleep 5
 
