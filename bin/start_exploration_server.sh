@@ -5,6 +5,7 @@
 [ -f "$HOME/rover/devel_isolated/setup.sh" ] && source "$HOME/rover/devel_isolated/setup.sh"
 [ -f "/etc/default/ros" ] && source "/etc/default/ros"
 
-export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:$HOME/rover/src/rover_gazebo/models/
+set -a
+source $HOME/rover/src/rover_launcher/config/CCAST_CONFIG
 
-roslaunch rover_gazebo rover_gazebo.launch
+rosrun exploration_server node.py
