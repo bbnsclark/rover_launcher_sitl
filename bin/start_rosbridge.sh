@@ -18,4 +18,4 @@ else
     echo "WARNING: AprilTag workspace setup script $APRILTAG_SETUP does not exist - you may not be able to read AprilTags"
 fi
 
-roslaunch rosbridge_server rosbridge_websocket.launch
+roslaunch rosbridge_server rosbridge_websocket.launch port:=$1
