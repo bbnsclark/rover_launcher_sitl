@@ -10,6 +10,10 @@ screen -d -m -S sitl $HOME/rover/src/rover_launcher_sitl/bin/start_gazebo_sitl.s
 
 sleep 5
 
+screen -d -m -S april_tags $HOME/rover/src/rover_launcher_sitl/bin/start_tag_detection.sh
+
+sleep 5
+
 screen -d -m -S rosbridge $HOME/rover/src/rover_launcher/bin/start_rosbridge.sh
 
 sleep 5
@@ -33,4 +37,3 @@ sleep 5
 screen -d -m -S state_obs $HOME/rover/src/rover_launcher_sitl/bin/start_state_observer.sh
 
 sleep 5
-
