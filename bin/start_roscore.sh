@@ -3,6 +3,6 @@
 [ -f "$HOME/rover/devel/setup.sh" ] && source "$HOME/rover/devel/setup.sh"
 [ -f "/etc/default/ros" ] && source "/etc/default/ros"
 
-echo Starting roscore at port $1.
+echo Starting roscore at port ${1:-11311}.
 
-roscore -p $1
+roscore -p ${1:-11311}

@@ -2,7 +2,7 @@
 
 sleep 1
 
-screen -d -m -S roscore $HOME/rover/src/rover_launcher_sitl/bin/start_roscore.sh
+screen -d -m -S roscore $HOME/rover/src/rover_launcher_sitl/bin/start_roscore.sh 11311
 
 sleep 5
 
