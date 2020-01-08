@@ -18,10 +18,6 @@ screen -d -m -S rosbridge $HOME/rover/src/rover_launcher/bin/start_rosbridge.sh
 
 sleep 5
 
-screen -d -m -S bbnbridge $HOME/rover/src/rover_launcher/bin/start_bbnbridge.sh
-
-sleep 5
-
 screen -d -m -S firmware $HOME/rover/src/rover_launcher_sitl/bin/start_sitl_firmware.sh
 
 sleep 5
