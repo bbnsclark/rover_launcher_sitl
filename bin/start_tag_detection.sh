@@ -7,4 +7,4 @@
 set -a
 source $HOME/rover/src/rover_launcher/config/CCAST_CONFIG
 
-roslaunch $HOME/rover/src/apriltag_ros/apriltag_ros/launch/april_tag_detection.launch
+roslaunch $HOME/rover/src/rover_launcher_sitl/launch/april_tag_detection.launch
