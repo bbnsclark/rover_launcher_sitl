@@ -5,7 +5,9 @@ BASE_ROS_PORT=11312
 BASE_BRIDGE_PORT=9091
 CCAST_ROS_PORT=$(echo "$BASE_ROS_PORT + $PLATFORM_ORDINAL" | bc)
 CCAST_BRIDGE_PORT=$(echo "$BASE_BRIDGE_PORT + $PLATFORM_ORDINAL" | bc)
-ROS_MASTER_URI=http://localhost:$CCAST_ROS_PORT
+
+# This is needed within start_roscore, so export it
+export ROS_MASTER_URI=http://localhost:$CCAST_ROS_PORT
 
 echo Platform ordinal = $PLATFORM_ORDINAL.
 echo CCAST_ROS_PORT = $CCAST_ROS_PORT
