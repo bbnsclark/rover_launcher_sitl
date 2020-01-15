@@ -22,10 +22,6 @@ screen -d -m -S firmware $HOME/rover/src/rover_launcher_sitl/bin/start_sitl_firm
 
 sleep 5
 
-screen -d -m -S icp $HOME/rover/src/rover_launcher_sitl/bin/start_lidar_icp.sh
-
-sleep 5
-
 screen -d -m -S ekf_inertial $HOME/rover/src/rover_launcher_sitl/bin/start_ekf_inertial.sh
 
 sleep 5
