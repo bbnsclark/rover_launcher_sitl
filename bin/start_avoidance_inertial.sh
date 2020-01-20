@@ -7,4 +7,4 @@
 set -a
 source $HOME/rover/src/rover_launcher/config/CCAST_CONFIG
 
-roslaunch $HOME/rover/src/rover_launcher_sitl/launch/avoidance_inertial.launch
+roslaunch $HOME/rover/src/rover_launcher/launch/avoidance_inertial.launch
