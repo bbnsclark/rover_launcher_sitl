@@ -5,6 +5,6 @@
 [ -f "/etc/default/ros" ] && source "/etc/default/ros"
 
 pushd ../../state_observer_sitl/src
-rosrun state_observer_sitl node.py _is_airsim:=True _platform_suffix:=_$1
+rosrun state_observer node.py _is_sitl:=True _is_airsim:=True _platform_suffix:=_$1
 popd
 
