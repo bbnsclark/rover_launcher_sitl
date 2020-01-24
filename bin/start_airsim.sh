@@ -18,28 +18,19 @@ echo Set ROS_MASTER_URI to $ROS_MASTER_URI.
 sleep 1
 
 screen -d -m -S roscore_$PLATFORM_ORDINAL $HOME/rover/src/rover_launcher_sitl/bin/start_roscore.sh $CCAST_ROS_PORT
-
 sleep 2
 
 screen -d -m -S sitl_$PLATFORM_ORDINAL $HOME/rover/src/rover_launcher_sitl/bin/start_airsim_sitl.sh
-
-sleep 2
+sleep 0.5
 
 screen -d -m -S bridge_$PLATFORM_ORDINAL $HOME/rover/src/rover_launcher_sitl/bin/start_rosbridge.sh $CCAST_BRIDGE_PORT
-
 sleep 2
 
-#screen -d -m -S firmware_$PLATFORM_ORDINAL $HOME/rover/src/rover_launcher_sitl/bin/start_sitl_firmware.sh
+screen -d -m -S firmware_$PLATFORM_ORDINAL $HOME/rover/src/rover_launcher_sitl/bin/start_sitl_firmware.sh
+sleep .5
 
-#sleep .5
-
-#screen -d -m -S icp_$PLATFORM_ORDINAL $HOME/rover/src/rover_launcher_sitl/bin/start_lidar_icp.sh
-
-#sleep 1
-
-#screen -d -m -S ekf_inertial_$PLATFORM_ORDINAL $HOME/rover/src/rover_launcher_sitl/bin/start_ekf_inertial.sh
-
-#sleep .5
+screen -d -m -S ekf_inertial_$PLATFORM_ORDINAL $HOME/rover/src/rover_launcher_sitl/bin/start_ekf_inertial.sh
+sleep .5
 
 screen -d -m -S state_obs_$PLATFORM_ORDINAL $HOME/rover/src/rover_launcher_sitl/bin/start_state_observer_airsim.sh $PLATFORM_ORDINAL
-
+sleep 2
