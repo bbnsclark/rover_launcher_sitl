@@ -4,6 +4,4 @@
 [ -f "$HOME/rover/devel/setup.sh" ] && source "$HOME/rover/devel/setup.sh"
 [ -f "/etc/default/ros" ] && source "/etc/default/ros"
 
-set -a
-
 rviz -d $HOME/rover/src/rover_gazebo/rviz/transition.rviz

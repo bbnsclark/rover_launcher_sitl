@@ -26,6 +26,18 @@ screen -d -m -S ekf_inertial $HOME/rover/src/rover_launcher_sitl/bin/start_ekf_i
 
 sleep 5
 
+screen -d -m -S avoidance $HOME/rover/src/rover_launcher_sitl/bin/start_avoidance.sh
+
+sleep 5
+
+screen -d -m -S navigation $HOME/rover/src/rover_launcher_sitl/bin/start_nav.sh
+
+sleep 5
+
 screen -d -m -S state_obs $HOME/rover/src/rover_launcher_sitl/bin/start_state_observer.sh
+
+sleep 5
+
+screen -d -m -S rviz $HOME/rover/src/rover_launcher_sitl/bin/start_rviz.sh
 
 sleep 5
