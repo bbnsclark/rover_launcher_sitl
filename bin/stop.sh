@@ -1,6 +1,10 @@
 #!/bin/bash
 
-kill $(ps aux | grep gazebo | awk '{print $2}')
+kill -9 $(pgrep -f 'gazebo')
+
+sleep 0.5
+
+kill -9 $(pgrep -f 'gzserver')
 
 sleep 0.5
 
