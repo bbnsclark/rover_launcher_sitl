@@ -20,11 +20,6 @@ echo '    - rosbridge'
 screen -d -m -S rosbridge $HOME/rover/src/rover_launcher/bin/start_rosbridge.sh
 
 sleep 2
-echo '    - firmware'
-
-screen -d -m -S firmware $HOME/rover/src/rover_launcher_sitl/bin/start_sitl_firmware.sh
-
-sleep 2
 echo '    - kalman filter'
 
 screen -d -m -S ekf_inertial $HOME/rover/src/rover_launcher_sitl/bin/start_ekf_inertial.sh
