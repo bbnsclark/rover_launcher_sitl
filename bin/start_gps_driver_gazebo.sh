@@ -5,7 +5,4 @@
 [ -f "$HOME/rover/devel_isolated/setup.sh" ] && source "$HOME/rover/devel_isolated/setup.sh"
 [ -f "/etc/default/ros" ] && source "/etc/default/ros"
 
-set -a
-source $HOME/rover/src/rover_launcher/config/CCAST_CONFIG
-
 rosrun gps_driver_sitl node.py _initial_heading_degrees:=50
