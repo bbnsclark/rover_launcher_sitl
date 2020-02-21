@@ -2,7 +2,7 @@
 
 echo 'Starting nodes:'
 echo '    - roscore'
-screen -d -m -S roscore $HOME/rover/src/rover_launcher_sitl/bin/start_roscore.sh 11311
+screen -d -m -S roscore $HOME/rover/src/rover_launcher_sitl/bin/start_roscore.sh
 
 sleep 2
 echo '    - gazebo'
