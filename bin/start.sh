@@ -32,7 +32,7 @@ screen -d -m -S navigation $HOME/rover/src/rover_launcher/bin/start_nav.sh
 sleep 2
 echo '    - state observer'
 
-screen -d -m -S state_obs $HOME/rover/src/rover_launcher/bin/start_state_observer.sh
+screen -d -m -S state_obs $HOME/rover/src/rover_launcher_sitl/bin/start_state_observer.sh
 
 sleep 5
 echo '    - rosbridge'
