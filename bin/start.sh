@@ -9,7 +9,7 @@ echo '    - gazebo'
 
 screen -d -m -S sitl $HOME/rover/src/rover_launcher_sitl/bin/start_gazebo_sitl.sh
 
-sleep 2
+sleep 10
 echo '    - april tag detections'
 
 screen -d -m -S april_tags $HOME/rover/src/rover_launcher_sitl/bin/start_tag_detection.sh
@@ -17,17 +17,17 @@ screen -d -m -S april_tags $HOME/rover/src/rover_launcher_sitl/bin/start_tag_det
 sleep 2
 echo '    - kalman filter'
 
-screen -d -m -S ekf_inertial $HOME/rover/src/rover_launcher_sitl/bin/start_ekf_inertial.sh
+screen -d -m -S ekf $HOME/rover/src/rover_launcher_sitl/bin/start_ekf.sh
 
 sleep 2
 echo '    - map_tf'
 
-screen -d -m -S map_tf $HOME/rover/src/rover_launcher/bin/start_map_tf.sh
+screen -d -m -S map_tf $HOME/rover/src/rover_launcher_sitl/bin/start_map_tf.sh
 
 sleep 2
 echo '    - navigation'
 
-screen -d -m -S navigation $HOME/rover/src/rover_launcher/bin/start_nav.sh
+screen -d -m -S navigation $HOME/rover/src/rover_launcher_sitl/bin/start_nav.sh
 
 sleep 2
 echo '    - state observer'
