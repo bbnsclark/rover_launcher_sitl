@@ -5,4 +5,4 @@
 [ -f "$HOME/rover/devel_isolated/setup.sh" ] && source "$HOME/rover/devel_isolated/setup.sh"
 [ -f "/etc/default/ros" ] && source "/etc/default/ros"
 
-roslaunch explore_lite explore_costmap.launch
+roslaunch exploration explore_costmap.launch
